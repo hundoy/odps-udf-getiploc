@@ -1,0 +1,20 @@
+package ipdata;
+
+import prepare.IpInfo;
+
+/**
+ * Created by wgy on 2018/1/17.
+ * 一个具体分区内的hard code模板。
+ * 类名、数据需要hard code生成
+ */
+public class IpData${num} extends BaseIpData{
+    public IpData${num}() {
+        // hardcode: put map
+        // ipInfoMap.put(${startIp}L, new IpInfo(${startIp}L,${endIp}L,"${province}","${city}"));
+${put_map}
+
+        // hardcode: add list
+        // startIpList.add(${startIp}L);
+${add_list}
+    }
+}

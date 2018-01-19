@@ -1,0 +1,26 @@
+package ipdata;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Created by wgy on 2018/1/17.
+ * 索引类模板，查找IP分区
+ * IpData类名、startIp需要hard code填写
+ */
+public class IpDataIndex {
+    public List<Long> startIpList = new ArrayList<Long>();
+    public Map<Long, Class> ipDataMap = new HashMap<Long, Class>();
+
+    public IpDataIndex() {
+        // hardcode: put map
+        // ipDataMap.put(${indexIp}L, IpData${num}.class);
+${put_map}
+
+        // hardcode: add list
+        // startIpList.add(${indexIp}L);
+${add_list}
+    }
+}
