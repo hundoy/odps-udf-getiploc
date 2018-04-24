@@ -9,7 +9,7 @@
 
 ## 其他解决方案
 - Maxcompute的UDF不能使用httpClient联网，所以无法在UDF中在线从第三方接口获取地市信息。
-- UDF普遍不支持加载静态资源，如果将地市信息存入文件，则会导致频繁IO。
+- Maxcompute的UDF不支持读取静态资源。跟联网问题一样，原因是由于其沙箱机制。（已跟阿里云的技术人员确认求证）
 - 如果不使用UDF，可以将IP地市信息存入数据库，利用map join查询。但需要对IP地市库进行大幅的删减，不然会因为过大无法加载到内存。并且查询速度极慢。
 
 ## 使用
@@ -20,5 +20,6 @@
 5. 将整个getiploc-udf打包成jar，上传到maxcompute，即可使用。
 
 ## 参考内容
-此项目灵感来自于https://github.com/lionsoul2014/ip2region，在此致谢！
+此项目灵感来自于 https://github.com/lionsoul2014/ip2region
+在此致谢！
 
